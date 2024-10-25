@@ -92,7 +92,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-3">
-      <div className="max-w-2xl mx-auto space-y-6">
+      <div className="max-w-5xl mx-auto space-y-6 mt-4">
         <div className="bg-white rounded-2xl shadow-xl p-4">
           <div className="flex items-center gap-3 mb-8">
             <Car className="w-8 h-8 text-indigo-600" />
@@ -101,7 +101,7 @@ function App() {
             </h1>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Date
@@ -119,7 +119,7 @@ function App() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Distance (km)
+                Distance parcouru (km)
               </label>
               <input
                 type="number"
