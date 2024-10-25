@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Fuel, Car, Calendar, Trash2 } from "lucide-react";
+import {
+  Fuel,
+  Car,
+  Calendar,
+  Trash2,
+  LandPlot,
+  CircleSlash2,
+} from "lucide-react";
 
 type ConsumptionEntry = {
   id: string;
@@ -174,17 +181,22 @@ function App() {
                     key={entry.id}
                     className="flex items-center justify-between border-b border-gray-200 pb-3"
                   >
-                    <div className="text-xs">
+                    <div className="text-sm flex flex-row">
                       <span className="font-semibold">
-                        {new Date(entry.date).toLocaleDateString()} :
+                        {new Date(entry.date).toLocaleDateString()} :&nbsp;
                       </span>{" "}
-                      {entry.kilometers} km, {entry.liters} L,{" "}
+                      <Fuel className="w-4 h-4 text-indigo-600" />
+                      &nbsp;{entry.liters} L&nbsp;
+                      <LandPlot className="w-4 h-4 text-indigo-600" />
+                      &nbsp;{entry.kilometers} km&nbsp;
                       <span
-                        className={`font-bold ${getConsumptionClass(
+                        className={`font-bold flex flex-row ${getConsumptionClass(
                           entry.consumption
                         )}`}
                       >
-                        {entry.consumption} L/100km
+                        <CircleSlash2 className="w-4 h-4 text-indigo-600" />{" "}
+                        &nbsp;
+                        {entry.consumption} L
                       </span>
                     </div>
                     <button
